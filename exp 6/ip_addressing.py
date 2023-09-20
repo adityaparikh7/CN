@@ -10,6 +10,8 @@ def get_ip_class(ip):
     first_octet = int(ip.split('.')[0])
     if 1 <= first_octet <= 126:
         return 'Class A'
+    elif first_octet == 127:
+        return 'Loopback Address'
     elif 128 <= first_octet <= 191:
         return 'Class B'
     elif 192 <= first_octet <= 223:

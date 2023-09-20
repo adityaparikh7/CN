@@ -9,6 +9,8 @@ def classful_ip_address(ip_str):
             first_octet = int(ip.exploded.split('.')[0])
             if 1 <= first_octet <= 126:
                 print(f'{ip_str} belongs to Class A.')
+            elif first_octet == 127:
+                print(f'{ip_str} is a loopback address.')
             elif 128 <= first_octet <= 191:
                 print(f'{ip_str} belongs to Class B.')
             elif 192 <= first_octet <= 223:
