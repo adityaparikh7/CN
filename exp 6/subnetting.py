@@ -20,7 +20,7 @@ def subnet_calculator(ip, subnet_mask):
     for i, subnet in enumerate(subnets):
         print(f"\nSubnet {i + 1}:")
         print(f"Subnet Address: {subnet.network_address}")
-        print(f"Netmask: {subnet.netmask}")
+        print(f"Subnet Mask: {subnet.netmask}")
         print(f"Broadcast Address: {subnet.broadcast_address}")
         print(f"Usable IP Range: {subnet.network_address + 1} - {subnet.broadcast_address - 1}")
         print(f"Number of Hosts: {subnet.num_addresses - 2}")
@@ -28,5 +28,6 @@ def subnet_calculator(ip, subnet_mask):
 if __name__ == "__main__":
     ip = generate_random_ip()
     subnet_mask = input("Enter subnet mask in CIDR notation (e.g., 24): ")
+    #only till 32
 
     subnet_calculator(ip, subnet_mask)
